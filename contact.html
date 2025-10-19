@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DCT Entertainment & Events - Contact</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; overflow-x: hidden; }
+        img { max-width: 100%; height: auto; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        /* Contact page enhancements */
+        .error-msg { color: #ff6b6b; font-size: 0.85rem; display: none; margin-top: 0.35rem; }
+        input[aria-invalid="true"], textarea[aria-invalid="true"] { outline: 2px solid #ff6b6b; }
+        .quick-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 0.75rem; }
+        .quick-actions a { display: inline-flex; align-items: center; gap: 8px; padding: 0.6rem 0.9rem; border-radius: 999px; text-decoration: none; color: #fff; background: #25D366; }
+        .quick-actions a.secondary { background: #1877F2; }
+        .quick-actions a.instagram { background: #C13584; }
+        .quick-actions a.youtube { background: #FF0000; }
+        .toast { position: fixed; bottom: 24px; right: 24px; background: rgba(0,0,0,0.85); color: #fff; padding: 0.9rem 1.1rem; border-radius: 12px; opacity: 0; transform: translateY(8px); transition: opacity .25s ease, transform .25s ease; z-index: 2000; }
+        .toast.show { opacity: 1; transform: translateY(0); }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" id="tailwind-main">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/Favicon/site.webmanifest">
+    <link rel="icon" href="assets/Favicon/favicon.ico">
+    <meta name="contact-email" content="muradkoket@gmail.com">
+    <!-- Optional: set a custom form endpoint (e.g., Web3Forms) -->
+    <meta name="form-endpoint" content="">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DCT Entertainment & Events",
+      "url": "https://dctentertainmentandevents.com/",
+      "logo": "assets/Dct logo-01.jpg",
+      "telephone": "+251911512425",
+      "email": "muradkoket@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bole Medhanialem behind Birhane Aderay mall, Mamas Kitchen 4th floor",
+        "addressLocality": "Addis Ababa",
+        "addressCountry": "ET"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container services-container">
+                <!-- Theme Toggle (Top-left) -->
+                <button class="theme-toggle" aria-label="Toggle theme" aria-pressed="false" title="Toggle light/dark">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="logo">
+                    <img src="assets/Dct logo-01.jpg" alt="DCT Entertainment Logo" class="logo-img">
+                </div>
+                <!-- Mobile Nav Toggle -->
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="events.html">Events</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Hero -->
+        <section class="hero contact-hero">
+            <div class="hero-content">
+                <h1 class="animate-on-scroll" data-aos="fade-up">Get in Touch</h1>
+                <p class="animate-on-scroll" data-aos="fade-up" data-aos-delay="150">Tell us about your event or project—we’ll get back to you shortly.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">We're Here to Help</span>
+                    <h2 class="section-title">Contact Us</h2>
+                </div>
+
+                <div class="join-team-content" style="align-items:flex-start; gap:2rem;">
+                    <!-- Form -->
+                    <form class="contact-form service-card" id="contactForm" style="flex:1; padding:1.5rem; border-radius:16px;">
+                        <!-- Honeypot anti-spam field -->
+                        <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
+                            <div>
+                                <label for="name">Name</label>
+                                <input id="name" name="name" type="text" placeholder="Your name" required aria-invalid="false">
+                                <small class="error-msg" id="err-name"></small>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" placeholder="you@example.com" required aria-invalid="false">
+                                <small class="error-msg" id="err-email"></small>
+                            </div>
+                            <div>
+                                <label for="phone">Phone</label>
+                                <input id="phone" name="phone" type="tel" placeholder="+251 ..." aria-invalid="false">
+                                <small class="error-msg" id="err-phone"></small>
+                            </div>
+                            <div>
+                                <label for="subject">Subject</label>
+                                <input id="subject" name="subject" type="text" placeholder="How can we help?" required aria-invalid="false">
+                                <small class="error-msg" id="err-subject"></small>
+                            </div>
+                        </div>
+                        <div style="margin-top:1rem;">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Describe your event or project" required aria-invalid="false"></textarea>
+                            <small class="error-msg" id="err-message"></small>
+                        </div>
+                        <button type="submit" class="cta-button" style="margin-top:1rem;">Send Message</button>
+                        <p id="formStatus" style="margin-top:.75rem; opacity:.9;"></p>
+                    </form>
+
+                    <!-- Contact Info / Map -->
+                    <div class="service-card" style="flex:1; padding:1.5rem; border-radius:16px;">
+                        <h3 style="margin-bottom:1rem;">Contact Information</h3>
+                        <div class="footer-address" style="margin-bottom:1rem;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bole Medhanialem behind Birhane Aderay mall, Mamas Kitchen 4th floor</span>
+                        </div>
+                        <div class="footer-contact" style="margin-bottom:1rem;">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+251 911 512 425</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>muradkoket@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="quick-actions">
+                            <a href="https://wa.me/251911512425" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a class="secondary" href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                            <a class="instagram" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a class="youtube" href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </a>
+                        </div>
+                        <div class="working-hours">
+                            <div class="hours-item">
+                                <span>Monday - Friday:</span>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Saturday:</span>
+                                <span>10:00 AM - 2:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sunday:</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                        <div style="margin-top:1.25rem; border-radius:14px; overflow:hidden;">
+                            <!-- Map placeholder (replace with real embed if desired) -->
+                            <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=38.68,8.96,38.85,9.05&layer=mapnik" style="width:100%; height:260px; border:0;"></iframe>
+                        </div>
+                        <p style="margin-top:.5rem;"><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">Get Directions</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (optional light section) -->
+        <section class="why-choose-us" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Good to Know</span>
+                    <h2 class="section-title">FAQ</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card"><h3>How soon should we book?</h3><p>For large events, 6–8 weeks notice is ideal. Rush projects welcome.</p></div>
+                    <div class="feature-card"><h3>Do you travel?</h3><p>Yes, we service multiple cities nationwide.</p></div>
+                    <div class="feature-card"><h3>Can you provide custom packages?</h3><p>Absolutely. We tailor services to your budget and goals.</p></div>
+                    <div class="feature-card"><h3>Do you handle AV and stage?</h3><p>Yes, complete production including sound, lighting, and staging.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section join-team" style="padding: 5rem 0;">
+            <div class="container">
+                <div class="join-team-content">
+                    <div class="join-team-text">
+                        <h2 class="section-title">Prefer to talk?</h2>
+                        <p>Call us directly or email—our team will respond promptly.</p>
+                        <a href="tel:+251911512425" class="cta-button">Call Now</a>
+                    </div>
+                    <div class="join-team-image">
+                        <img src="assets/download.jpg" alt="Contact DCT">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DCT Entertainment</h3>
+                    <p>Creating unforgettable experiences through creativity and excellence.</p>
+                    <div class="footer-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bole medhanialem behind Berhane aderay mamas kitchen, 4th floor</span>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+251 911 512 425</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>muradkoket@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Projects</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Working Hours</h3>
+                    <div class="working-hours">
+                        <div class="hours-item">
+                            <span>Monday - Friday:</span>
+                            <span>9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Saturday:</span>
+                            <span>10:00 AM - 2:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sunday:</span>
+                            <span>Closed</span>
+                        </div>
+                        <div class="hours-item virtual-hours">
+                            <span><i class="fas fa-laptop-house"></i> Virtual Support:</span>
+                            <span>24/7</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> DCT Entertainment & Events. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      // Footer year only; form handling centralized in js/app.js
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

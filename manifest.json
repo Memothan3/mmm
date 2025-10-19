@@ -1,0 +1,93 @@
+{
+  "name": "DCT Entertainment & Events",
+  "short_name": "DCT Events",
+  "theme_color": "#111827",
+  "background_color": "#0a0a0a",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/index.html?source=pwa",
+  "description": "Premier entertainment and event management services in Kenya",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "categories": ["entertainment", "events", "wedding", "corporate"],  
+  "screenshots": [
+    {
+      "src": "assets/screenshot1.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "DCT Entertainment Homepage"
+    },
+    {
+      "src": "assets/screenshot2.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Our Services"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "View our event services",
+      "url": "/services.html"
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact.html"
+    }
+  ],
+  "icons": [
+    {
+      "src": "assets/Favicon/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/Favicon/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/Favicon/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "related_applications": [],
+  "id": "/index.html",
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "handle_links": "preferred",
+  "edge_side_panel": {
+    "preferred_width": 360
+  },
+  "share_target": {
+    "action": "/share-target",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "images",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+dct",
+      "url": "/share?url=%s"
+    }
+  ]
+}
